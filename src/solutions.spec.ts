@@ -20,8 +20,8 @@ describe('Test add functions', function () {
     expect(typeof resultUseCaseOne).toBe('number')
   })
 
-  it.only('The function should return an integer, the sum of the strings passed where the delimeter is passed beginning of the string with //[delemiter]\n[numbers pattern]', function () {
-    const resultUseCaseOne = add('//;\n1;2');
+  it('The function should return an integer, the sum of the strings passed where the delimeter is passed beginning of the string with //[delemiter]\n[numbers pattern]', function () {
+    const resultUseCaseOne = add('//;\n1;2')
     expect(resultUseCaseOne).toBe(3)
     expect(typeof resultUseCaseOne).toBe('number')
   })
