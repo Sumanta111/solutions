@@ -10,9 +10,8 @@ function add(fullString: string) {
     currentString = fullString
   }
   return currentString.split(pattern).reduce((accum: number, splittedString: string, currentIndex: number) => {
-    console.log('SUMANTA', splittedString, '----', currentIndex)
-    if (splittedString === '//' && currentIndex === 1) {
-      return accum
+    if (Math.sign(Number(splittedString)) === -1) {
+      throw new Error('Value must be non-negative')
     }
     if (!isNaN(Number(splittedString))) {
       return (accum += Number(splittedString))
@@ -22,7 +21,7 @@ function add(fullString: string) {
 }
 
 function patternmatch(input: string) {
-  const pattern = /^\/\/(.)\n([\d;\s]*)$/
+  const pattern = /^\/\/(.)\n([-?\d; \n]*)$/
   const match = input.match(pattern)
 
   if (match) {
