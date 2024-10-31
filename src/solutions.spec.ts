@@ -26,11 +26,12 @@ describe('Test add functions', function () {
     expect(typeof resultUseCaseOne).toBe('number')
   })
 
-  it('calling add with negetive number should throw an exception', function () {
-    expect(() => add('//;\n1;-2')).toThrow('Value must be non-negative')
-  })
+  // it('calling add with negetive number should throw an exception', function () {
+  //   expect(() => add('//;\n1;-2')).toThrow('Value must be non-negative')
+  // })
 
-  it.only('calling add with negetive number should throw an exception with all the negetive number present', function () {
+  it('calling add with negetive number should throw an exception with all the negetive number present', function () {
     expect(() => add('//;\n1;-2;9;-1')).toThrow(`Value must be non-negative for -2,-1`)
+    expect(() => add('//;\n1;-1')).toThrow(`Value must be non-negative for -1`)
   })
 })

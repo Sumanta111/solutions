@@ -9,9 +9,15 @@ function add(fullString: string) {
     pattern = /(,|\n|\/\/)/
     currentString = fullString
   }
-  return currentString.split(pattern).reduce((accum: number, splittedString: string, currentIndex: number) => {
-    if (Math.sign(Number(splittedString)) === -1) {
-      throw new Error('Value must be non-negative')
+  const negetiveNumbersPresent: number[] = []
+  const spliteedWithPattern = currentString.split(pattern)
+  return spliteedWithPattern.reduce((accum: number, splittedString: string, currentIndex: number) => {
+    const isNegetiveNumber = Math.sign(Number(splittedString)) === -1
+    if (isNegetiveNumber) {
+      negetiveNumbersPresent.push(Number(splittedString))
+    }
+    if (negetiveNumbersPresent.length > 0 && currentIndex === spliteedWithPattern.length - 1) {
+      throw new Error(`Value must be non-negative for ${negetiveNumbersPresent.join(',')}`)
     }
     if (!isNaN(Number(splittedString))) {
       return (accum += Number(splittedString))
