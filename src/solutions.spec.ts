@@ -25,4 +25,8 @@ describe('Test add functions', function () {
     expect(resultUseCaseOne).toBe(3)
     expect(typeof resultUseCaseOne).toBe('number')
   })
+
+  it('calling add with negetive number should throw an exception', function () {
+    expect(add('//;\n1;-2')).toThrow("Value must be non-negative")
+  })
 })
