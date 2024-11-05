@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Match against snapshot Should match against snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <h5
+        class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-1f9xtph-MuiTypography-root"
+        style="margin-bottom: 20px; font-weight: bold; color: rgb(25, 118, 210); margin-top: 30px;"
+      >
+        Acceptance
+      </h5>
+      <p
+        class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-vjrxpc-MuiTypography-root"
+        style="margin-bottom: 10px;"
+      >
+        1. a string of comma-separated numbers
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-vjrxpc-MuiTypography-root"
+        style="margin-bottom: 10px;"
+      >
+        2. any amount of number as input
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-vjrxpc-MuiTypography-root"
+        style="margin-bottom: 10px;"
+      >
+        3. new lines between numbers (instead of commas) ("1\\n2,3" should return 6)
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-vjrxpc-MuiTypography-root"
+        style="margin-bottom: 10px;"
+      >
+        4. Put delimiter, the beginning of the string will contain a separate line that looks like this: "//[delimiter]\\n[numbers…]". For example, "//;\\n1;2" where the delimiter is ";" should return 3
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-vjrxpc-MuiTypography-root"
+        style="margin-bottom: 10px;"
+      >
+        5. Calling add with a negative number will throw an exception: "negative numbers not allowed negative_number", If there are multiple negative numbers, show all of them in the exception message, separated by commas.
+      </p>
+    </div>
+  </body>,
+  "container": <div>
+    <h5
+      class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-1f9xtph-MuiTypography-root"
+      style="margin-bottom: 20px; font-weight: bold; color: rgb(25, 118, 210); margin-top: 30px;"
+    >
+      Acceptance
+    </h5>
+    <p
+      class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-vjrxpc-MuiTypography-root"
+      style="margin-bottom: 10px;"
+    >
+      1. a string of comma-separated numbers
+    </p>
+    <p
+      class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-vjrxpc-MuiTypography-root"
+      style="margin-bottom: 10px;"
+    >
+      2. any amount of number as input
+    </p>
+    <p
+      class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-vjrxpc-MuiTypography-root"
+      style="margin-bottom: 10px;"
+    >
+      3. new lines between numbers (instead of commas) ("1\\n2,3" should return 6)
+    </p>
+    <p
+      class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-vjrxpc-MuiTypography-root"
+      style="margin-bottom: 10px;"
+    >
+      4. Put delimiter, the beginning of the string will contain a separate line that looks like this: "//[delimiter]\\n[numbers…]". For example, "//;\\n1;2" where the delimiter is ";" should return 3
+    </p>
+    <p
+      class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-vjrxpc-MuiTypography-root"
+      style="margin-bottom: 10px;"
+    >
+      5. Calling add with a negative number will throw an exception: "negative numbers not allowed negative_number", If there are multiple negative numbers, show all of them in the exception message, separated by commas.
+    </p>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

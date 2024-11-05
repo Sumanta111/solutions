@@ -1,5 +1,5 @@
 function patternmatch(input: string) {
-  const pattern = /^\/\/(.)\n([-?\d; \n]*)$/
+  const pattern = /^\/\/(.+)\n([-?\d; *+?.^$|()\[\]{}\\]*)$/
   const match = input.match(pattern)
 
   if (match) {
@@ -11,7 +11,7 @@ function patternmatch(input: string) {
 }
 
 function escapeRegExp(string: string) {
-  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') // $& means the whole matched string
+  return string.replace(/([.*+?^${}()|\[\]\\/])/g, '\\$1')
 }
 
 export { patternmatch, escapeRegExp }

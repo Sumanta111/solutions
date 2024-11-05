@@ -7,7 +7,7 @@ type InputType = {
   onInputChange: (param: string) => void
 } & typeof defaultProps
 
-export default function InputComponnet({ error, helperText, onInputChange }: InputType) {
+export default function InputComponnet({ error, onInputChange, helperText }: InputType) {
   const [userInput, setUserInput] = useState('')
 
   const onChangeCalc = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -18,14 +18,14 @@ export default function InputComponnet({ error, helperText, onInputChange }: Inp
 
   return (
     <TextField
-      id="string-calc-input"
-      error={error}
-      label="Please enter input"
+      label="Your Input"
       variant="outlined"
+      fullWidth
       value={userInput}
       onChange={onChangeCalc}
-      helperText={helperText}
-      inputProps={{ spellCheck: false }} // Optionally disable spell check
+      style={{ marginBottom: '20px' }}
+      error={error}
+      helperText={helperText || ''}
     />
   )
 }
