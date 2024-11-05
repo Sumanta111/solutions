@@ -1,4 +1,4 @@
-import patternmatch from '../utilities/commonUtil'
+import { escapeRegExp, patternmatch } from '../utilities/commonUtil'
 
 function add(fullString: string) {
   //NOTE: this is required as Javascript engine treating the \n as a new line and converting it to \\n
@@ -6,7 +6,7 @@ function add(fullString: string) {
   let pattern
   let currentString
   if (matchedPattern) {
-    pattern = new RegExp(`(${matchedPattern.delimiter}|,|\n|\/\/)`)
+    pattern = new RegExp(`(${escapeRegExp(matchedPattern.delimiter)}|,|\n|\/\/)`)
     currentString = matchedPattern.numbers
   } else {
     pattern = /(,|\n|\/\/)/
